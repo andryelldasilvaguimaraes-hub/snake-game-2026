@@ -1,68 +1,81 @@
 <!DOCTYPE html>
 
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <!--
-            <meta charset> Define o conjunto de carateres (enconding)
-            da pagina. UTF-8 garante que acentos e caracteres especiais 
-            apareçam corretamente. 
-        -->
-            <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-            <!--
-            <meta viewport>: esta tag é importante para sites que devem funcionar
-            em dispositivos moveis (celular). width-device -> garante que a 
-            largura da pagina vai se adaptar á largura do dispositivo.
-            initial-scale=1 -> nao aplica zoom automatico ao abrir a pagina.
-            Sem ela o celular vei tentar mostrar a página como se fosse um computador
-        -->
-        <title>Jogo da cobrinha</title>
-        <!--
-        Estilos e CSS vão ficar abaixo desta linha - Proxima Aual 
-        -->
-        <style>
+<html lang="pt-br"> 
+ <head>
+  <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-               .container {
-                text-align: center;
-                background-color: white;
-                padding: 30px;
-                border-radius: 20px;
-                box-shadow: 0px 10px 30px black;
-               }
+ <!--
+ <meta viewport>: esta tag é importante para sites que deve funcionar em dispositivos móveis. width-device -
+ 
 
-               .info {
-                    font-size: 1em;
-               }
+ -->
 
-        </style>
+ <title>Jogo da Cobrinha</title>
 
 
-        </head>
-        <body>
+ <style>
 
-              <div   class="container">   
-                 
-                <h1> &#x128013; jogo da cobrinha</h1>
+   .container{
+      text-align: center;
+      background-color: rgb(242, 255, 240);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0px 10px 30px black;
+}
 
-                </div   class="info">
-                    <div class="pontuacao"></div>
-                      pontuação:    <span id="pontos"> 0 </span> 
+  .info{
 
-                    </div>
+        font-size: 1em;
+  }
 
-                    <div class="record">
-            
+  .potuacao{
+   font-weight: bold;
+   color: #0c9100c5;
+  }
 
-                            record: <span id="record"> 0 </span>
+  .recorde{
+   font-weight: bold;
+   color: crimson;
+  }
 
-                    </div>
+  #canvas{
+    border: 3px solid #333;
+    border-radius: 10px;
+    background-color: azure;
+  }
+ </style>
 
-                </div>
+ </head>
 
-              </div>
+ <body>
+    
 
-           
-        </body>
+    <div  class="container">
 
-   
-</html>
+    <h1>&#128013; Jogo da Cobrinha 
+    </h1>  
+
+   <div class="info">
+   <div class="potuacao">
+     Pontuacao: <span id="pontos"> 0 </span>
+   </div>
+
+<div class="recorde">
+  Recorde: <span id="recorde"> 0 </span>
+</div>
+
+   </div>
+  <canvas id="canvas" width="400" height="400">
+  <!--
+    <canvas> é um elemento  especial para desenho 2d ou 3d.Por si só
+    é apenas um retangulo vazio. O Java Script vai usar o "contexto 2d"
+    para desenhar a cobra, e comida, etc.
+
+    nah nah nah nahnahnah hey jude!
+  
+  -->
+
+  </canvas>
+    </div>
+ </body>
