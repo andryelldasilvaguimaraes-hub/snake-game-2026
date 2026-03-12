@@ -44,10 +44,19 @@
     border-radius: 10px;
     background-color: azure;
     display: block;
+    margin: 20px auto;
+    box-shadow: 0px 5px 15px #0c9100c5 rgba(0, 0, 0, 0.2);
+  }
 
+  .controles{
+    margin-top: 20px;
 
-        margin: 20px auto;
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0,2);
+  }
+
+  button {
+   font-size: 16px;
+   cursor: pointer;
+   background-color: chartreuse;
   }
  </style>
 
@@ -58,37 +67,45 @@
 
     <div  class="container">
 
-        <h1>&#128013; Jogo da Cobrinha </h1>  
+    <h1>&#128013; Jogo da Cobrinha 
+    </h1>  
 
-        <div class="info">
-                <div class="potuacao">
-                    Pontuacao: <span id="pontos"> 0 </span>
-                </div>
+   <div class="info">
+   <div class="potuacao">
+     Pontuacao: <span id="pontos"> 0 </span>
+   </div>
 
-                <div class="recorde">
-                Recorde: <span id="recorde"> 0 </span>
-                </div>
+<div class="recorde">
+  Recorde: <span id="recorde"> 0 </span>
+</div>
 
-        </div>
+   </div>
+  <canvas id="canvas" width="400" height="400">
+  <!--
+    <canvas> é um elemento  especial para desenho 2d ou 3d.Por si só
+    é apenas um retangulo vazio. O Java Script vai usar o "contexto 2d"
+    para desenhar a cobra, e comida, etc.
 
-        <canvas id="canvas" width="400" height="400">
-        <!--
-            <canvas> é um elemento  especial para desenho 2d ou 3d.Por si só
-            é apenas um retangulo vazio. O Java Script vai usar o "contexto 2d"
-            para desenhar a cobra, e comida, etc.
-xxx
-            nah nah nah nahnahnah hey jude!
-        
-        -->
+    nah nah nah nahnahnah hey jude!
+  
+  -->
 
-        </canvas>
+  </canvas>
 
-         <div>
-            
-            <button onclick="alert('em construção');">iniciar Jogo</button>
-            
-            <button>pausar / continuar</button>
+    <div class="controles">
 
-        </div>
+      <button onclick="alert('Em construção')">Iniciar Jogo</button>
+
+      <button >Pausar / Continuar</button>
+
+
+    </div>
+
+
+
     </div>
  </body>
+
+
+
+</html>
