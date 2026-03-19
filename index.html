@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="pt-br"> 
@@ -7,62 +8,71 @@
 
  <!--
  <meta viewport>: esta tag é importante para sites que deve funcionar em dispositivos móveis. width-device -
- 
-
  -->
 
  <title>Jogo da Cobrinha</title>
-
 
  <style>
 
    .container{
       text-align: center;
-      background-color: rgb(242, 255, 240);
+      background-color: #0f172a; /* fundo escuro */
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 0px 10px 30px black;
+      box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+      color: #e2e8f0;
 }
 
   .info{
-
         font-size: 1em;
   }
 
   .potuacao{
    font-weight: bold;
-   color: #0c9100c5;
+   color: #22c55e; /* verde destaque */
   }
 
   .recorde{
    font-weight: bold;
-   color: crimson;
+   color: #f43f5e; /* vermelho suave */
   }
 
   #canvas{
-    border: 3px solid #333;
-    border-radius: 20px;
-    background-color: azure;
+    border: 3px solid #22c55e;
+    border-radius: 10px;
+    background-color: #020617; /* fundo escuro */
     display: block;
     margin: 20px auto;
-    box-shadow: 0px 5px 15px #0c9100c5 rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   }
 
   .controles{
     margin-top: 20px;
-
   }
 
   button {
    font-size: 16px;
    cursor: pointer;
-   background-color: chartreuse;
-    color: rgb(7, 7, 7);
-    border: none;
-    border-radius: 8px;
-    margin: 5px;
-    transition: all 0,3s ease;
+   background-color: #22c55e; /* verde */
+   color: #022c22;
+   border: none;
+   padding: 8px 12px;
+   border-radius: 8px;
+   margin: 5px;
+   transition: all 0.3s ease;
+   
   }
+  .teclas{
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    gap: 5px;
+    justify-content: center;
+    margin: 15px auto;
+  }
+  button:hover{
+    background-color: #16a34a;
+  }
+
  </style>
 
  </head>
@@ -102,40 +112,35 @@
       <button onclick="alert('Em construção')">Iniciar Jogo</button>
       <button >Pausar / Continuar</button>
 
-
-    </div>
       <div class="teclas">
 
-          <div> class="tecla vazia"></div>
-          <div>&#9650;</div>
-          <div> class="tecla vazia"></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          
-
+         <div class="tecla vazia"></div>
+         <div>&#9650;</div>
+         <div class="tecla vazia"></div>
+         <div>&#9668;</div>
+         <div>&#9660;</div>
+         <div>&#9658;</div>
+         
+        
       </div>
-
+    </div>
 
     </div>
 
-      <script>
+<script>
 
-         function iniciarjogo(){
+function iniciarJogo(){
+  console.log('Jogo começou!!');
+}
 
-            console.log('pausa no jogo!!');
-         }
+function pausarJogo(){
+  console.log('Pausa no Jogo!!');
+}
 
 
+</script>
 
-        function pausarjogo(){
-
-            console.log('pausa no jogo!!');
-
-        }
-      <script>
+    
  </body>
-
-
 
 </html>
