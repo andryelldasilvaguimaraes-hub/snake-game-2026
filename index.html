@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="pt-br"> 
@@ -70,17 +69,28 @@
     margin: 15px auto;
   }
 
-  .teclas{width: 50px;
+  .tecla{
+    width: 50px;
     height: 50px;
     background-color: #000307;
-    color: #0d72f5;
+    color: #e2e8f0;
     border-radius: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
   }
+  .tecla:active{
+    background-color: #22c55e;
+  }
+   .tecla.vazio{
+    background-color: transparent;
+    cursor: default;
+   }
 
-    .tecla.vazio{
-      background-color: transparent;
-      cursor: default;
-    }
   button:hover{
     background-color: #16a34a;
   }
@@ -126,16 +136,21 @@
 
       <div class="teclas">
 
-         <div class="tecla vazia"></div>
-         <div class="tecla vazia>&#9650;</div>
-         <div class="tecla vazia"></div>
-         <div class="tecla vazia>&#9668;</div>
-         <div class="tecla vazia>&#9660;</div>
-         <div class="tecla vazia>&#9658;</div>
+         <div class="tecla vazio"></div>
+         <div class="tecla">&#9650;</div>
+         <div class="tecla vazio"></div>
+         <div class="tecla">&#9668;</div>
+         <div class="tecla">&#9660;</div>
+         <div class="tecla">&#9658;</div>
          
         
       </div>
-    </div>
+    
+     <div>
+      <h3>Como Jogar:</h3>
+      <p>Use as setas de teclado ou os butões acima para controlar a cobra</p>
+      <p>Coma as maçãs vermelhas &#127822; para crescer e ganhar pontos</p>
+      <p>Não bata nas paredes nem no próprio corpo</p>
 
     </div>
 
