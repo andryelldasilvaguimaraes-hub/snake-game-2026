@@ -105,9 +105,18 @@
     margin-bottom: 10px;
     color: #000307;
    }
-
+    
   button:hover{
     background-color: #16a34a;
+  }
+
+  @media (max-width:600px){
+    h1{
+      font-size: 1.8em;
+    }
+   .info{
+    font-size: 1em;
+   }
   }
 
  </style>
@@ -152,11 +161,11 @@
       <div class="teclas">
 
          <div class="tecla vazio"></div>
-         <div class="tecla">&#9650;</div>
+         <div class="tecla" onclick="mudarDirecao('cima')">&#9650;</div>
          <div class="tecla vazio"></div>
-         <div class="tecla">&#9668;</div>
-         <div class="tecla">&#9660;</div>
-         <div class="tecla">&#9658;</div>
+         <div class="tecla" onclick="mudarDirecao('esquerda')">&#9668;</div>
+         <div class="tecla" onclick="mudarDirecao('baixo')">&#9660;</div>
+         <div class="tecla" onclick="mudarDirecao('direita')">&#9658;</div>
          
         
       </div>
@@ -171,6 +180,9 @@
 
 <script>
 
+function mudarDirecao(novaDirecao){
+  console.log(novaDirecao)
+}
 function iniciarJogo(){
   console.log('Jogo começou!!');
 }
