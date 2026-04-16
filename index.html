@@ -147,8 +147,7 @@
     é apenas um retangulo vazio. O Java Script vai usar o "contexto 2d"
     para desenhar a cobra, e comida, etc.
 
-    nah nah nah nahnahnah hey jude!
-  
+    
   -->
 
   </canvas>
@@ -179,6 +178,40 @@
     </div>
 
 <script>
+
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getcontex('2d');
+
+
+  
+  //tamanho de cada quadrado do game
+   const tamanhoQuadrado = 20;
+
+
+  //quantos quadrados cabem na largura e altura do espaço 2d
+  const  quantidadeQuadrado = canvas.widt /tamanhoQuadrado;
+
+
+  //=========================
+  // variaveis do jogo
+  //=========================
+  let cobra;               // array (vetor) que guarda as posiçoes da cobra
+  let direcao;
+  let proximadireçao;
+  let comida;
+  let pontos;
+  let recorde;
+  let jogoativo;
+  let intervalojogo;
+
+
+
+  recorde = localStorage.getItem('recordecobrinha')
+  document.getElementById('record').textcontent = recorde;
+
+
+
+
 
 function mudarDirecao(novaDirecao){
   console.log(novaDirecao)
