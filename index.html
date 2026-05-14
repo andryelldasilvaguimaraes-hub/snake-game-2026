@@ -273,12 +273,29 @@
             //=============================
             function desenhar(){
                 //Limpar o fundo do Canvas
-                ctx.fillStyle = '#000000';
+                ctx.fillStyle = '#f0f0f0';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                //Desenhar a grade (opcional, para visualização)
-                ctx.strokeStyle = '#e0e0e0';
+                
+                // passo 2
+                // desenhae a grade (linhas de referencia)
+                
+                ctx.strokeStyle = '#000000';
                 ctx.lineWidth = 0.5;
+
+                for(let i = 0; i <= quantidadeQuadrados; i++){
+                    //linha vertical
+                    ctx.beginpath();
+                    ctx.moveto(i * tamanhoQuadrado, 0);
+                    ctx.lineto( i * tamanhoQuadrado, canvas.height);
+                    ctx.stroke();
+
+
+                }
+
+
+
+
 
                 ctx.fill();
             }
